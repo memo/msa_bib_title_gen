@@ -1,6 +1,5 @@
-Generate fun titles (or phrases) that sound scientific from a [bibtex](http://www.bibtex.org/) file
+Generate fun titles (or phrases) that sound scientific by un-abbreviating a given word using titles from a [bibtex](http://www.bibtex.org/) file.
 
-Unabbreviates a given word or phrase using words from the titles of a given bibtex file.
 Useful for generating fun titles for papers or other shennigans.
 
 e.g.
@@ -24,15 +23,22 @@ BUTTFACE:
 
 #USAGE:
 
-Minimum parameters:
+Basic usage:
 
 >msa_bib_title_gen --phrase [phrase to unabbreviate] --bib_path [path to bibtex file] 
 
 In case you don't have a bibtex file, I've provided mine (msa.bib). Papers on mostly AI, philosophy, cognitive science, robotics, graphics etc.
 
-for help run:
-
->msa_bib_title_gen --help
+>usage: msa_bib_title_gen.py [-h] [--phrase PHRASE] [--bib_path BIB_PATH]
+>                            [--count_thresh COUNT_THRESH]
+>                            [--sample_count SAMPLE_COUNT]
+>
+>optional arguments:
+>  -h, --help : show this help message and exit
+>  --phrase PHRASE : phrase to unabbreviate
+>  --bib_path BIB_PATH : path to bibtex file
+>  --count_thresh COUNT_THRESH  :  ignore words occuring less than this many times
+>  --sample_count SAMPLE_COUNT :  how many to sample
 
 
 #REQUIREMENTS:
